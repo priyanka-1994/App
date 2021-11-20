@@ -1,0 +1,13 @@
+---
+#   name: installing nginx
+ - hosts: webservers 
+   become: yes
+   tasks:
+     - name: ensure nginx is at the latest
+       apt: update_cache=yes
+     - name: install nginx 
+       apt: name=nginx state=latest
+   handlers: 
+     - name: restart nginx
+       service: name=nginx state=reloaded
+      
