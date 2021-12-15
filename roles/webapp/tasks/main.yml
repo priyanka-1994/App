@@ -1,0 +1,7 @@
+
+# tasks file for webapp
+
+- include: install.yml
+- include: configure.yml
+- include: service.yml
+

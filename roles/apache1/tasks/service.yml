@@ -1,0 +1,3 @@
+---
+ - name: start service
+   apt: name=apache2 state=present
